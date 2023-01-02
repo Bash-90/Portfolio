@@ -151,7 +151,7 @@ ul {
   font-weight: 600;
 }
 .header .shopping-cart .content .cart-boxes .cart-box input {
-  width: 35px;
+  width: 50px;
   height: 25px;
   border-radius: 10px;
   background: transparent;
@@ -515,6 +515,18 @@ ul {
   position: relative;
   width: 100%;
 }
+.skills::before  {
+  content: "";
+  position: absolute;
+  background-image: url(/img/color-sharp.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 500px;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+}
 .skills::after {
   content: "";
   position: absolute;
@@ -527,17 +539,13 @@ ul {
   top: 0;
   z-index: -1;
 }
-.skills::before  {
-  content: "";
-  position: absolute;
-  background-image: url(/img/color-sharp.png);
-  background-repeat: no-repeat;
-  background-position: center center;
-  width: 500px;
-  height: 100%;
-  left: 0;
-  bottom: 0;
-  z-index: -1;
+@media (max-width: 767px) {
+  .skills::before  {
+    display: none;
+  }
+  .skills::after {
+    display: none;
+  }
 }
 .skills .container {
   background-color: #121212;
@@ -1014,9 +1022,6 @@ footer .container .text .icons p {
   margin-top: 20px;
 }
 /* End Footer */
-
-
-
 .top {
   position: fixed;
   right: 50px;
@@ -1026,6 +1031,8 @@ footer .container .text .icons p {
   opacity: 0;
   visibility: hidden;
   z-index: 555555555;
+  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+  border: none;
 }
 .top.active {
   opacity: 1;
@@ -1033,4 +1040,5 @@ footer .container .text .icons p {
 } 
 .top i {
   font-size: 30px;
+  color: white;
 }
